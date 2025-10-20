@@ -109,7 +109,7 @@ Deploy to Tomcat server
 
 Access the app at: http://localhost:8080/SimpleBankApp/
 
-# ✅ Functional Verification
+#### ✅ Functional Verification
 
 Register new user
 
@@ -129,7 +129,7 @@ Logout
 
 Each action is logged in the console and database for verification.
 
-# 🔒 Security
+#### 🔒 Security
 
 Only authenticated users can access protected routes
 
@@ -139,7 +139,7 @@ Logout clears session
 
 Passwords stored as hashed values
 
-# 📖 Notes
+#### 📖 Notes
 
 Make sure Tomcat is running on port 8080
 
