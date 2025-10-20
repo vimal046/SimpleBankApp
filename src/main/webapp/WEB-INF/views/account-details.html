@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Details</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .success {
+        background-color: #d4edda;
+        color: #155724;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        border: 1px solid #c3e6cb;
+      }
+
+      .account-info {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      .info-row:last-child {
+        border-bottom: none;
+      }
+
+      .info-label {
+        font-weight: bold;
+        color: #555;
+      }
+
+      .info-value {
+        color: #333;
+      }
+
+      .balance {
+        font-size: 24px;
+        color: #28a745;
+        font-weight: bold;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: transform 0.2s;
+      }
+
+      .back-link:hover {
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Account Details</h1>
+
+      <div th:if="${message}" class="success" th:text="${message}"></div>
+
+      <div class="account-info">
+        <div class="info-row">
+          <span class="info-label">Account Number:</span>
+          <span class="info-value" th:text="${account.accountNumber}"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">Account Type:</span>
+          <span class="info-value" th:text="${account.accountType}"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">Customer Name:</span>
+          <span
+            class="info-value"
+            th:text="${account.customer.firstName + ' ' + account.customer.lastName}"
+          ></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">Email:</span>
+          <span class="info-value" th:text="${account.customer.email}"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">Phone:</span>
+          <span class="info-value" th:text="${account.customer.phone}"></span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">Current Balance:</span>
+          <span
+            class="balance"
+            th:text="'₹ ' + ${#numbers.formatDecimal(account.balance, 1, 2)}"
+          ></span>
+        </div>
+      </div>
+
+      <a href="/SimpleBankApp/dashboard" class="back-link"
+        >← Back to Dashboard</a
+      >
+    </div>
+  </body>
+</html>

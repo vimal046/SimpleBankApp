@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration>
+
+	<!--Console Appender -->
+	<appender name="COLORED_CONSOLE"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%cyan(%d{yyyy-MM-dd HH:mm:ss}) %highlight(%-5level)
+				%magenta([%thread]) %green(%logger{36}) - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- File Appender -->
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/simple-bank-app.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/simple-bank-app-%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} -
+				%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- Application Loggers -->
+	<logger name="com.banking" level="DEBUG" additivity="false">
+		<appender-ref ref="COLORED_CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+
+	<!-- Spring Framework Loggers -->
+
+	<logger name="org.springframework" level="DEBUG"
+		additivity="false">
+		<appender-ref ref="COLORED_CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	<logger name="org.springframework.web" level="DEBUG"
+		additivity="false">
+		<appender-ref ref="COLORED_CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+	<logger name="org.springframework.jdbc" level="DEBUG"
+		additivity="false">
+		<appender-ref ref="COLORED_CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+
+
+	<!-- Thymeleaf logger -->
+	<logger name="org.thymeleaf" level="DEBUG" additivity="false">
+		<appender-ref ref="COLORED_CONSOLE" />
+		<appender-ref ref="FILE" />
+	</logger>
+
+	<!-- Root Logger -->
+	<root level="DEBUG">
+		<appender-ref ref="COLORED_CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
