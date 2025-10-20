@@ -61,7 +61,7 @@ SimpleBankApp/
 ## 🖼️ Screenshots
 
 **Login Page**  
-![Login Page](screenshots/login.png)
+![Login Page](screenshots/login.jpg)
 
 **Registration Page**  
 ![Register Page](screenshots/register.png)
