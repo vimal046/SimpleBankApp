@@ -64,26 +64,26 @@ SimpleBankApp/
 ![Login Page](screenshots/login.jpg)
 
 **Registration Page**  
-![Register Page](screenshots/register.png)
+![Register Page](screenshots/register.jpg)
 
 **Dashboard**  
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.jpg)
 
 **Create Account**  
-![Create Account](screenshots/create-account.png)
+![Create Account](screenshots/create-account1.jpg)
+![Create Account](screenshots/create-account2.jpg)
 
 **View Account**  
-![View Account](screenshots/view-account.png)
+![View Account](screenshots/view account.jpg)
 
 **Deposit / Withdraw / Transfer**  
-![Transactions](screenshots/transactions.png)
+![Transactions](screenshots/deposit.jpg)
+![Transactions](screenshots/transfer.jpg)
+![Transactions](screenshots/withdraw.jpg)
 
 **Transaction History**  
-![Transaction History](screenshots/transaction-history.png)
+![Transaction History](screenshots/history.jpg)
 
-> Replace the `screenshots/*.png` with actual screenshots of your app.
-
----
 
 ## ⚡ Getting Started
 
