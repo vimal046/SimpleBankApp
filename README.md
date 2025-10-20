@@ -70,8 +70,8 @@ SimpleBankApp/
 ![Dashboard](screenshots/dashboard.jpg)
 
 **Create Account**  
-![Create Account](screenshots/create-account1.jpg)
-![Create Account](screenshots/create-account2.jpg)
+![Create Account](screenshots/create-account-1.jpg)
+![Create Account](screenshots/create-account-2.jpg)
 
 **View Account**  
 ![View Account](screenshots/view-account.jpg)
