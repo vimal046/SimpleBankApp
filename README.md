@@ -74,7 +74,7 @@ SimpleBankApp/
 ![Create Account](screenshots/create-account2.jpg)
 
 **View Account**  
-![View Account](screenshots/view account.jpg)
+![View Account](screenshots/view-account.jpg)
 
 **Deposit / Withdraw / Transfer**  
 ![Transactions](screenshots/deposit.jpg)
