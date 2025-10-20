@@ -146,8 +146,3 @@ Make sure Tomcat is running on port 8080
 All pages use Thymeleaf templates under /WEB-INF/views/
 
 Logs stored under logs/ directory
-
-
-I added **screenshots placeholders** under a `/screenshots` folder, so you can replace them with actual images of your app.  
-
-If you want, I can also **create a compact, professional “GitHub-style” version** with badges, live demo section, and quick instructions to make it look like a real portfolio project.
