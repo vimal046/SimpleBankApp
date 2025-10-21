@@ -30,6 +30,8 @@ This project allows users to register, log in, create accounts, deposit, withdra
 ---
 
 ## 📂 Project Structure
+
+```
 SimpleBankApp/
 ├── src/main/java
 │ ├── model/
